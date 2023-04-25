@@ -7,7 +7,7 @@ import numpy as np
 data = pd.read_csv("data_stocks.csv")
 
 # logaritmando os valores no dado
-log_data = np.log(data/data.shift(data))
+log_data = np.log(data/data.shift())
 
 # Encontrando o índice da coluna do Ibovespa
 market_col = log_data.columns.get_loc("^BVSP")
